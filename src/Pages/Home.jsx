@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchAllBlogs = async () => {
-      const res = await axios.get("http://localhost:9000/user/get/allblogs", {
+      const res = await axios.get("https://myblogzone-3.onrender.com/user/get/allblogs", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -37,7 +37,7 @@ const Home = () => {
                         >
                           <img
                             className="img-fluid"
-                            src={`http://localhost:9000/${blog.thumbnail}`}
+                            src={`https://myblogzone-3.onrender.com/${blog.thumbnail}`}
                             alt=""
                           />
                           <Link to={`/blog/${blog._id}`}>

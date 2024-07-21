@@ -14,7 +14,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:9000/user/register", input);
+            const res = await axios.post("https://myblogzone-3.onrender.com/user/register", input);
             alert("User registrated  successfully");
             navigate("/login")
         } catch (error) {

@@ -16,7 +16,7 @@ const AddBlog = () => {
     const fetchAllCategories = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:9000/user/get/category",
+          "https://myblogzone-3.onrender.com/user/get/category",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -49,7 +49,7 @@ const AddBlog = () => {
       formData.append("thumbnail", file);
 
       const res = await axios.post(
-        "http://localhost:9000/user/post/addblog",
+        "https://myblogzone-3.onrender.com/user/post/addblog",
         formData,
         {
           headers: {

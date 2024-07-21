@@ -12,7 +12,7 @@ const AddCategory = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:9000/user/post/addcategory",
+        "https://myblogzone-3.onrender.com/user/post/addcategory",
         input,
         {
           headers: {

@@ -11,7 +11,7 @@ const Login = () => {
     const handleLogin = async(e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:9000/user/login', input);
+            const res = await axios.post('https://myblogzone-3.onrender.com/user/login', input);
             alert(res.data.msg)
             console.log(res.data)
             localStorage.setItem('token', res.data.token);

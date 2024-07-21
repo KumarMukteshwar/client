@@ -10,7 +10,7 @@ const SingleBlog = () => {
   useEffect(() => {
     const fetchSingleBlog = async () => {
       try {
-        const response = await axios.get(`http://localhost:9000/user/get/blog/${id}`, {
+        const response = await axios.get(`https://myblogzone-3.onrender.com/user/get/blog/${id}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
           },
@@ -35,7 +35,7 @@ const SingleBlog = () => {
             {blog.thumbnail && (
               <img
                 className='img img-responsive img-rounded my-3'
-                src={`http://localhost:9000/${blog.thumbnail}`}
+                src={`https://myblogzone-3.onrender.com/${blog.thumbnail}`}
                 alt={blog.title}
               />
             )}
